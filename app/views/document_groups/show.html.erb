@@ -1,0 +1,21 @@
+<h2 class='text-center'><%= @document_group.name %></h2>
+<hr>
+<br>
+<div class="row">
+  <h4>Files:</h4>
+  <% @document_group.documents.each do |document| %>
+    <p><%= link_to document.name, document_path(document) %></p>
+  <% end %>
+
+  <br>
+
+  <div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	  <li><%= link_to 'Upload A New File', new_document_group_document_path(@document_group) %></li>
+	</ul>
+  </div>
+
+  <br>
+
+  <%= link_to 'Edit Folder', edit_document_group_path(@document_group) %> | <%= link_to 'Destroy Folder', document_group_path(@document_group), method: :delete %>
+</div>

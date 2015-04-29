@@ -1,0 +1,14 @@
+<%= form_for @document do |f| %>
+  <%= f.hidden_field :document_group_id%>
+  <div class="input-group">
+    <%= f.label :name, class: 'input-group-addon' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="input-group">
+    <%= f.label :description, class: 'input-group-addon' %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+  <br>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

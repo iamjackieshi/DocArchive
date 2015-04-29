@@ -1,0 +1,21 @@
+<h2 class='text-center'><%= @user_group.name %></h2>
+<hr>
+<br>
+<div class="row">
+  <h4>Contacts:</h4>
+  <% @user_group.users.each do |user| %>
+    <p><%= link_to user.name, user_path(document) %></p>
+  <% end %>
+
+  <br>
+
+  <div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	  <li><%= link_to 'Create A New Contact', new_user_path(@user_group) %></li>
+	</ul>
+  </div>
+
+  <br>
+
+  <%= link_to 'Edit Folder', edit_document_group_path(@document_group) %> | <%= link_to 'Destroy Folder', document_group_path(@document_group), method: :delete %>
+</div>

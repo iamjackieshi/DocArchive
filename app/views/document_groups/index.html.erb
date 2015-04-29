@@ -1,0 +1,16 @@
+<h2 class='text-center'>Document Archive System</h2>
+<hr>
+<br>
+<div class="row text-center">
+  <% @document_groups.each do |document_group| %>
+    <div class="col-md-4">
+      <%= link_to(document_group.name, document_group_path(document_group)) %>
+    </div>
+<% end %>
+</div>
+
+ <div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	  <li><%= link_to 'Create A New Folder', new_document_group_path %></li>
+	</ul>
+</div>

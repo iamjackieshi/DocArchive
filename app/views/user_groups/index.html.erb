@@ -1,0 +1,16 @@
+<h2 class='text-center'>Document Archive System</h2>
+<hr>
+<br>
+<div class="row text-center">
+  <% @user_groups.each do |user_group| %>
+    <div class="col-md-4">
+      <%= link_to(user_group.name, user_group_path(user_group)) %>
+    </div>
+<% end %>
+</div>
+
+ <div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+	  <li><%= link_to 'Add a new contact group', new_user_group_path %></li>
+	</ul>
+</div>
